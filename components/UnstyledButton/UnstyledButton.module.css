@@ -1,0 +1,19 @@
+.btn {
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: var(--display);
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline-offset: 2px;
+}
+
+.btn:focus:not(:focus-visible) {
+  outline: none;
+}

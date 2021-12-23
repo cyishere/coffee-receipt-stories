@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 import styles from "./Intro.module.css";
@@ -34,6 +33,7 @@ const Intro = () => (
         layout="fixed"
         width={35}
         height={20}
+        priority="true"
       />
     </div>
   </section>

@@ -21,7 +21,7 @@ const SEO = ({ title }) => {
       <link rel="canonical" href={siteMetaData.url} />
       <meta
         name="image"
-        content={`${siteMetaData.url}/images/${siteMetaData.image}`}
+        content={`${siteMetaData.url}/${siteMetaData.image}`}
       />
       <meta name="image:alt" content={siteMetaData.description} />
 
