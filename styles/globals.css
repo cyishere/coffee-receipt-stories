@@ -1,6 +1,6 @@
-/*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
+/* 
+ * Josh's Custom CSS Reset
+ * https://www.joshwcomeau.com/css/custom-css-reset/
 */
 *,
 *::before,
@@ -53,7 +53,9 @@ h6 {
   isolation: isolate;
 }
 
-/* CUSTOM */
+/* ================== */
+/* Custom Properties  */
+/* ================== */
 html {
   /* colors */
   --clr-bg-gray: hsl(0deg 0% 92%);
@@ -62,6 +64,9 @@ html {
   --bump: cubic-bezier(0, 0.6, 0.32, 1.06);
 }
 
+/* ============== */
+/* Global Styles  */
+/* ============== */
 body {
   font-family: sans-serif;
   background-color: var(--clr-bg-gray);
