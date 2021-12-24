@@ -57,6 +57,9 @@ h6 {
 html {
   /* colors */
   --clr-bg-gray: hsl(0deg 0% 92%);
+
+  /* animations */
+  --bump: cubic-bezier(0, 0.6, 0.32, 1.06);
 }
 
 body {

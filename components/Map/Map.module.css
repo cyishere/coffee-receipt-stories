@@ -1,14 +1,86 @@
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 .container {
-  background-color: hsl(0deg 0% 0% / 0.3);
+  background-color: var(--clr-bg-gray);
+  padding: 70px 16px;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  display: grid;
+  place-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .container {
+    animation: slideIn 500ms both var(--bump);
+  }
 }
 
 .close {
   position: absolute;
   top: 16px;
   right: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 430px;
+}
+
+.locationColumn {
+  width: 856px;
+  height: 704px;
+  position: relative;
+}
+
+.world {
+  background-image: url(/images/world-map.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  width: 856px;
+  height: 704px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.keywordsColumn h2 {
+  padding-left: 6px;
+  margin-bottom: 56px;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 30px;
+}
+
+.keyword {
+  width: var(--width);
+  height: var(--height);
+  overflow: hidden;
+}
+
+.content {
+  display: block;
+  position: relative;
+  transition: transform 500ms ease-in;
+}
+
+.content:hover {
+  transform: translateY(-50%);
+  transition: transform 200ms ease-out;
 }
