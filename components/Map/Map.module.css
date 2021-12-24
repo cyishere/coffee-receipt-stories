@@ -1,3 +1,6 @@
+/* =========== */
+/* Animations  */
+/* =========== */
 @keyframes slideIn {
   from {
     transform: translateX(100%);
@@ -9,6 +12,9 @@
   }
 }
 
+/* ==================== */
+/* The Modal Container  */
+/* ==================== */
 .container {
   background-color: var(--clr-bg-gray);
   padding: 70px 16px;
@@ -27,35 +33,115 @@
   }
 }
 
+/* ================= */
+/* The Close Button  */
+/* ================= */
 .close {
   position: absolute;
   top: 16px;
   right: 20px;
 }
 
+/* ================== */
+/* The Main Container  */
+/* ================== */
 .grid {
+  width: 1416px;
+  padding: 16px;
   display: grid;
   grid-template-columns: 1fr 430px;
+  gap: 30px;
 }
 
+/* ========== */
+/* Locations  */
+/* ========== */
 .locationColumn {
   width: 856px;
   height: 704px;
   position: relative;
 }
 
-.world {
-  background-image: url(/images/world-map.png);
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  width: 856px;
-  height: 704px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.locationColumn h2 {
+  padding-left: 43px;
+  margin-bottom: 80px;
 }
 
+/* The World Map */
+.world {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+}
+
+.world_map {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* The Locations ouside Japan */
+.location {
+  position: absolute;
+}
+
+.location:hover {
+  transform: translateY(-2px);
+  transition: transform 200ms var(--bump);
+}
+
+#location1 {
+  left: 685px;
+  top: 232px;
+}
+
+#location2 {
+  left: 677px;
+  top: 351px;
+}
+
+#location3 {
+  left: 591px;
+  top: 249px;
+}
+
+#location4 {
+  left: 594px;
+  top: 321px;
+}
+
+#location5 {
+  left: 465px;
+  top: 286px;
+}
+
+#location6 {
+  left: 311px;
+  top: 272px;
+}
+
+#location7 {
+  left: 159px;
+  top: 214px;
+}
+
+#location8 {
+  left: 197px;
+  top: 274px;
+}
+
+#location9 {
+  left: 172px;
+  top: 343px;
+}
+
+/* ========= */
+/* Keywords  */
+/* ========= */
 .keywordsColumn h2 {
   padding-left: 6px;
   margin-bottom: 56px;

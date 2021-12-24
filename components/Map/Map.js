@@ -8,6 +8,11 @@ import VisuallyHidden from "../VisuallyHidden";
 import { KEYWORDS, LOCATION } from "@/data/selectors";
 
 function Map({ isOpen, handleClose }) {
+  const worldMap = {
+    width: "858px",
+    height: "553px",
+  };
+
   return (
     <Dialog isOpen={isOpen} className={styles.container}>
       <div className={styles.close}>
@@ -36,9 +41,29 @@ function Map({ isOpen, handleClose }) {
               property="true"
             />
           </h2>
-          <div className={styles.world}>
+          <div
+            className={styles.world}
+            style={{
+              "--width": worldMap.width,
+              "--height": worldMap.height,
+            }}
+          >
+            <div className={styles.world_map}>
+              <Image
+                src="/images/world-map.png"
+                alt=""
+                layout="fixed"
+                width={worldMap.width}
+                height={worldMap.height}
+                property="true"
+              />
+            </div>
             {LOCATION.map((place) => (
-              <div className={styles.location} key={place.id}>
+              <div
+                className={styles.location}
+                key={place.id}
+                id={styles[`location${place.id}`]}
+              >
                 <VisuallyHidden>{place.text}</VisuallyHidden>
                 <Link href={`/location/${place.text.toLowerCase()}`} passHref>
                   <a>
