@@ -186,3 +186,79 @@ export const LOCATION = [
     height: 58,
   },
 ];
+
+/**
+ * @type {LocationType[]} LOCATION
+ */
+export const LOCATION_IN_JAPAN = [
+  {
+    id: 1,
+    text: "Nagano",
+    image: "/images/location/nagano.png",
+    width: 96,
+    height: 47,
+  },
+  {
+    id: 2,
+    text: "Aichi",
+    image: "/images/location/aichi.png",
+    width: 78,
+    height: 57,
+  },
+  {
+    id: 3,
+    text: "Okinawa",
+    image: "/images/location/okinawa.png",
+    width: 133,
+    height: 39,
+  },
+  {
+    id: 4,
+    text: "Akita",
+    image: "/images/location/akita.png",
+    width: 85,
+    height: 43,
+  },
+  {
+    id: 5,
+    text: "Niigata",
+    image: "/images/location/Niigata.png",
+    width: 88,
+    height: 40,
+  },
+  {
+    id: 6,
+    text: "Saitama",
+    image: "/images/location/saitama.png",
+    width: 104,
+    height: 48,
+  },
+  {
+    id: 7,
+    text: "Aomori",
+    image: "/images/location/aomori.png",
+    width: 98,
+    height: 36,
+  },
+  {
+    id: 8,
+    text: "Miyagi",
+    image: "/images/location/Miyagi.png",
+    width: 104,
+    height: 37,
+  },
+  {
+    id: 9,
+    text: "Tochigi",
+    image: "/images/location/Tochigi.png",
+    width: 114,
+    height: 34,
+  },
+  {
+    id: 10,
+    text: "Tokyo",
+    image: "/images/location/tokyo.png",
+    width: 102,
+    height: 37,
+  },
+];

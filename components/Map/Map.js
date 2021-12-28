@@ -5,12 +5,16 @@ import Link from "next/link";
 import styles from "./Map.module.css";
 import UnstyledButton from "../UnstyledButton";
 import VisuallyHidden from "../VisuallyHidden";
-import { KEYWORDS, LOCATION } from "@/data/selectors";
+import { KEYWORDS, LOCATION, LOCATION_IN_JAPAN } from "@/data/selectors";
 
 function Map({ isOpen, handleClose }) {
   const worldMap = {
     width: "858px",
     height: "553px",
+  };
+  const japanMap = {
+    width: "397px",
+    height: "397px",
   };
 
   return (
@@ -79,6 +83,48 @@ function Map({ isOpen, handleClose }) {
                 </Link>
               </div>
             ))}
+            <div
+              className={styles.japan}
+              style={{
+                "--width": japanMap.width,
+                "--height": japanMap.height,
+              }}
+            >
+              <div className={styles.japan_map}>
+                <Image
+                  src="/images/japan-map.png"
+                  alt=""
+                  layout="fixed"
+                  width={japanMap.width}
+                  height={japanMap.height}
+                  property="true"
+                />
+                {LOCATION_IN_JAPAN.map((place) => (
+                  <div
+                    className={styles.location}
+                    key={place.id}
+                    id={styles[`locationInJp${place.id}`]}
+                  >
+                    <VisuallyHidden>{place.text}</VisuallyHidden>
+                    <Link
+                      href={`/location/${place.text.toLowerCase()}`}
+                      passHref
+                    >
+                      <a>
+                        <Image
+                          src={place.image}
+                          alt=""
+                          layout="fixed"
+                          width={place.width}
+                          height={place.height}
+                          property="true"
+                        />
+                      </a>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
         <aside className={styles.keywordsColumn}>
