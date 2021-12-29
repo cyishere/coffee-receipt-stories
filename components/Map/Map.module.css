@@ -21,7 +21,16 @@
   }
 }
 
-@keyframes popIn {
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes popUp {
   0% {
     transform: scale(0);
   }
@@ -60,7 +69,7 @@
   }
 
   .close {
-    animation: popIn 300ms both var(--bump);
+    animation: popUp 300ms both var(--bump);
     animation-delay: 900ms;
   }
 }
@@ -263,10 +272,25 @@
 .content {
   display: block;
   position: relative;
-  transition: transform 500ms ease-in;
+  position: relative;
 }
 
-.content:hover {
-  transform: translateY(-50%);
-  transition: transform 200ms ease-out;
+.wrapper,
+.active_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.active_wrapper {
+  opacity: 0;
+}
+
+.content:hover .wrapper {
+  animation: fadeOut 200ms both ease;
+}
+
+.content:hover .active_wrapper {
+  animation: fadeIn 500ms both ease-in;
+  animation-delay: 200ms;
 }

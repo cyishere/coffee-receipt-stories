@@ -163,7 +163,7 @@ function Map({ isOpen, handleClose }) {
                         property="true"
                       />
                     </div>
-                    <div className={styles.wrapper}>
+                    <div className={styles.active_wrapper}>
                       <Image
                         src={keyword.images.selected}
                         alt=""
