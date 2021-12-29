@@ -6,10 +6,55 @@
 .receipts {
   width: 100%;
   height: 100%;
-  display: grid;
-  place-content: center;
+  position: relative;
 }
 
 .receipt {
-  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#cover {
+  transform: translate(-50%, -50%);
+}
+
+#featured1 {
+  transform: rotate(-6.71deg) translate(-353px, -229px);
+}
+
+#featured2 {
+  transform: rotate(9.42deg) translate(-91px, -171px);
+}
+
+#featured3 {
+  transform: rotate(5.14deg) translate(15px, -275px);
+}
+
+#featured4 {
+  transform: rotate(-4.96deg) translate(-232px, -233px);
+}
+
+#featured5 {
+  transform: rotate(14.13deg) translate(141px, -302px);
+}
+
+#featured6 {
+  transform: rotate(-1.02deg) translate(-163px, -287px);
+}
+
+#featured7 {
+  transform: rotate(3.92deg) translate(-65px, -290px);
+}
+
+#featured8 {
+  transform: rotate(-2.27deg) translate(-225px, -165px);
+}
+
+#featured9 {
+  transform: rotate(-4.7deg) translate(-56px, -233px);
+}
+
+#featured10 {
+  transform: rotate(-4.09deg) translate(-109px, -80px);
 }

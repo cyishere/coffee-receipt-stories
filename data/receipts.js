@@ -1,4 +1,10 @@
 /**
+ * @typedef {Object} SizeType
+ * @property {number} width
+ * @property {number} height
+ */
+
+/**
  * @typedef {Object} ReceiptType
  * @property {string} id The id of each item.
  * @property {string} location The location of each item.
@@ -6,6 +12,8 @@
  * @property {boolean} featured Whether the receipt is featured on the home page.
  * @property {number} width The width of each item's image
  * @property {number} height The height of each item's image
+ * @property {SizeType} fixed
+ * @property {number} featured_stack_order The display order according to the design.
  */
 
 /**
@@ -35,6 +43,11 @@ export const RECEIPTS = [
     featured: true,
     width: 563,
     height: 1421,
+    fixed: {
+      width: 243,
+      height: 648,
+    },
+    featured_stack_order: 5,
   },
   {
     id: "043",
@@ -51,6 +64,11 @@ export const RECEIPTS = [
     featured: true,
     width: 634,
     height: 1235,
+    fixed: {
+      width: 280,
+      height: 570,
+    },
+    featured_stack_order: 4,
   },
   {
     id: "104",
@@ -107,6 +125,11 @@ export const RECEIPTS = [
     featured: true,
     width: 825,
     height: 1236,
+    fixed: {
+      width: 310,
+      height: 470,
+    },
+    featured_stack_order: 9,
   },
   {
     id: "166",
@@ -115,6 +138,11 @@ export const RECEIPTS = [
     featured: true,
     width: 864,
     height: 1653,
+    fixed: {
+      width: 296,
+      height: 595,
+    },
+    featured_stack_order: 3,
   },
   {
     id: "172",
@@ -123,6 +151,11 @@ export const RECEIPTS = [
     featured: true,
     width: 1240,
     height: 815,
+    fixed: {
+      width: 563,
+      height: 366,
+    },
+    featured_stack_order: 2,
   },
   {
     id: "240",
@@ -147,6 +180,11 @@ export const RECEIPTS = [
     featured: true,
     width: 1107,
     height: 1384,
+    fixed: {
+      width: 271,
+      height: 619,
+    },
+    featured_stack_order: 7,
   },
   {
     id: "278",
@@ -155,6 +193,11 @@ export const RECEIPTS = [
     featured: true,
     width: 725,
     height: 906,
+    fixed: {
+      width: 262,
+      height: 435,
+    },
+    featured_stack_order: 8,
   },
   {
     id: "300",
@@ -171,6 +214,11 @@ export const RECEIPTS = [
     featured: true,
     width: 1095,
     height: 1369,
+    fixed: {
+      width: 295,
+      height: 506,
+    },
+    featured_stack_order: 6,
   },
   {
     id: "328",
@@ -187,6 +235,11 @@ export const RECEIPTS = [
     featured: true,
     width: 729,
     height: 911,
+    fixed: {
+      width: 329,
+      height: 473,
+    },
+    featured_stack_order: 1,
   },
   {
     id: "348",
@@ -203,5 +256,10 @@ export const RECEIPTS = [
     featured: true,
     width: 840,
     height: 1050,
+    fixed: {
+      width: 235,
+      height: 311,
+    },
+    featured_stack_order: 10,
   },
 ];
